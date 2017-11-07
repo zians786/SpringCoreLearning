@@ -12,7 +12,7 @@
  <property name="brand" value="MRF"></property> </bean>
   	<context:component-scan base-package="com.bridgeit.SpringCore"></context:component-scan>
  
-<!-- <bean id="vehicle" class="com.bridgeit.SpringCore.Bike"></bean> -->
+<bean id="vehicle" class="com.bridgeit.SpringCore.Bike"></bean> 
 </beans>
 
 
