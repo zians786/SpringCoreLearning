@@ -1,31 +1,13 @@
 package com.bridgeit.dao;
 
-import java.util.Scanner;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
-
-	public static void main(String[] args) {
-		int number;
-		String name,dept,id;
-		Scanner scanner=new Scanner(System.in);
-		System.out.println("*** Welcome to Student Management ***");
-		System.out.println("Enter user ID, Name, department and Number");
-		id=scanner.next();
-		name=scanner.next();
-		dept=scanner.next();
-		number=scanner.nextInt();
-		
-		ApplicationContext context=new 
-		
-		
-		
-		
-		
-		
-		
+	public static void main(String args[]) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("SpringDao.xml");
+		StuddenDao student = (StuddenDao) context.getBean("studdenDao");
+		int status = student.insert(new Student("Ziauddin", "13co18", "Comp", "7624449044"));
+		System.out.println(status);
 	}
-
 }

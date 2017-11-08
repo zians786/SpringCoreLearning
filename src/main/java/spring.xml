@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-   xmlns:context = "http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"  		
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-   http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
-
-
-<bean id="tyre" class="com.bridgeit.SpringCore.Tyre">
- <property name="brand" value="MRF"></property> </bean>
-  	<context:component-scan base-package="com.bridgeit.SpringCore"></context:component-scan>
- 
-<bean id="vehicle" class="com.bridgeit.SpringCore.Bike"></bean> 
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+      <bean id="vehicle" class="com.bridgeit.springBasics.Vehicle"></bean>
+   <bean id="car" class="com.bridgeit.springBasics.Car" autowire="byType"></bean>	
+<bean id="student" class="com.bridgeit.setterInjection.Student">
+<property name="name"><value>Ziauddin</value></property>
+<property name="email"><value>zia@gmailcom</value></property>
+<property name="id"><value>13c018</value></property>
+<property name="number"><value>1234567</value></property>
+</bean>
 </beans>
-
-
